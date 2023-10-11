@@ -1,8 +1,6 @@
 <template>
     <q-header elevated class="bg-white text-grey-8 q-py-xs" height-hint="58">
         <q-toolbar>
-            <q-btn flat dense round @click="store.toggleLeftDrawer()" aria-label="Menu" icon="menu" />
-
             <q-btn flat no-caps no-wrap class="q-ml-xs" v-if="$q.screen.gt.xs">
                 <q-icon :name="fabYoutube" color="red" size="28px" />
                 <q-toolbar-title shrink class="text-weight-bold">
