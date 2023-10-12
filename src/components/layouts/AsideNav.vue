@@ -1,5 +1,5 @@
 <template>
-    <q-drawer v-if="!miniState" v-model="drawer" :breakpoint="-100" :mini="leftDrawerOpen" show-if-above bordered class="YL__drawer" :width="260">
+    <q-drawer :v-model="!miniState ? drawer : smallDrawer" :breakpoint="-1" :mini="!miniState ? leftDrawerOpen : !leftDrawerOpen" show-if-above bordered class="YL__drawer" :width="!miniState ? 260 : 160">
         <q-list padding>
             <q-btn z-max flat dense round @click="store.toggleLeftDrawer()" aria-label="Menu" class="YL__drawer-button" icon="menu" />
                 <q-item v-for="link in links1" :key="link.text" class="YL__drawer-item"  v-ripple clickable>
@@ -12,19 +12,6 @@
                 </q-item>
             </q-list>
     </q-drawer>
-    <q-drawer v-else v-model="smallDrawer" :mini="!leftDrawerOpen" :breakpoint="-100" show-if-above bordered class="YL__drawer" :width="160">
-            <q-list padding>
-                <q-btn flat dense round @click="store.toggleLeftDrawer()" aria-label="Menu" class="YL__drawer-button" icon="menu" />
-                <q-item v-for="link in links1" :key="link.text" class="YL__drawer-item"  v-ripple clickable>
-                    <q-item-section avatar>
-                        <q-icon color="white" :name="link.icon" />
-                    </q-item-section>
-                    <q-item-section>
-                        <q-item-label>{{ link.text }}</q-item-label>
-                    </q-item-section>
-                </q-item>
-            </q-list>
-        </q-drawer>
 </template>
 
 <script setup lang="ts">
