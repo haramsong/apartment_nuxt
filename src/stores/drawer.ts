@@ -8,11 +8,13 @@ export const useDrawerStore = defineStore(
 
         const toggleLeftDrawer = () => {
             leftDrawerOpen.value = !leftDrawerOpen.value
+            console.log(leftDrawerOpen.value);
         }
 
         const miniState = computed(() => {
-            return $q.screen.width < 600;
+            return $q.screen.width < 700;
         })
+        
 
         return {
             leftDrawerOpen,
