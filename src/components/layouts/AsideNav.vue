@@ -1,7 +1,6 @@
 <template>
     <q-drawer :v-model="!miniState ? drawer : smallDrawer" :breakpoint="-1" :mini="!miniState ? leftDrawerOpen : !leftDrawerOpen" show-if-above bordered class="YL__drawer" :width="!miniState ? 260 : 160">
         <q-list padding>
-            <q-btn z-max flat dense round @click="store.toggleLeftDrawer()" aria-label="Menu" class="YL__drawer-button" icon="menu" />
                 <q-item v-for="link in links1" :key="link.text" class="YL__drawer-item"  v-ripple clickable>
                     <q-item-section avatar>
                         <q-icon color="white" :name="link.icon" />
@@ -60,10 +59,6 @@ const links1 = [
     padding: 1rem
     color: white
   
-  &__drawer-button
-    font-size: 1.5rem
-    top: 0
-    color: white
 
   &__drawer-footer-link
     text-decoration: none
