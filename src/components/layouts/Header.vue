@@ -1,7 +1,7 @@
 <template>
     <q-header elevated class="bg-white text-grey-8 q-py-xs" height-hint="58">
         <q-toolbar>
-            <q-btn z-max flat dense round @click="store.toggleLeftDrawer()" aria-label="Menu" class="YL__drawer-button" icon="menu" />
+            <q-btn z-max flat dense round @click="store.toggleLeftDrawer()" v-if="!$q.screen.gt.xs" aria-label="Menu" class="YL__drawer-button" icon="menu" />
             <q-btn flat no-caps no-wrap class="q-ml-xs" v-if="$q.screen.gt.xs">
                 <q-icon :name="fabYoutube" color="red" size="28px" />
                 <q-toolbar-title shrink class="text-weight-bold">
@@ -48,16 +48,10 @@
 <script setup lang="ts">
 import { fabYoutube } from '@quasar/extras/fontawesome-v6';
 import { useDrawerStore } from '@/stores/drawer';
-import { storeToRefs } from 'pinia';
 
 const $q = useQuasar();
 
 const store = useDrawerStore();
-
-const drawer = computed(() => $q.screen.gt.xs);
-const smallDrawer = computed(() => $q.screen.width < 300);
-
-const { leftDrawerOpen } = storeToRefs(store);
 
 const search = ref('')
 

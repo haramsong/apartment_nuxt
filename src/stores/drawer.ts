@@ -12,7 +12,7 @@ export const useDrawerStore = defineStore(
         }
 
         const miniState = computed(() => {
-            return $q.screen.width < 700;
+            return $q.screen.width < 600;
         })
         
 
