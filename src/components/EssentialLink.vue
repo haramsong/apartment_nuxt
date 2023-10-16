@@ -8,7 +8,7 @@
         <div v-else>
             <div v-if="children.length > 0">
                 <!-- {{children}} -->
-                <q-expansion-item expand-separator icon="mail" :label="title" :caption="caption" :header-inset-level="level"
+                <q-expansion-item expand-separator :icon="icon" :label="title" :header-inset-level="level"
                     default-closed>
                     <EssentialLink v-for="child in children" :key="child" v-bind="child">
                     </EssentialLink>
@@ -23,36 +23,27 @@
     </div>
 </template>
 
-<script>
-export default {
-    name: 'EssentialLink',
-    props: {
+<script setup lang="ts">
+    defineProps({
         title: {
             type: String,
             required: true
         },
-
-        caption: {
-            type: String,
-            default: ''
-        },
-
         link: {
             type: String,
             default: '#'
         },
-
         icon: {
             type: String,
             default: ''
         },
-
         level: {
-            type: String,
-            default: ''
+            type: Number,
+            default: 0
         },
-
-        children: []
-    }
-}
+        children: {
+            type: Array,
+            default: []
+        }
+    })
 </script>
