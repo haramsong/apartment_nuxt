@@ -3,23 +3,16 @@ import { defineStore } from 'pinia';
 export const useDrawerStore = defineStore(
     'drawer',
     () => {
-        const $q = useQuasar();
-        const leftDrawerOpen = ref<boolean>(false)
+        const leftDrawerOpen = ref<boolean>(true)
 
         const toggleLeftDrawer = () => {
             leftDrawerOpen.value = !leftDrawerOpen.value
             console.log(leftDrawerOpen.value);
         }
 
-        const miniState = computed(() => {
-            return $q.screen.width < 600;
-        })
-        
-
         return {
             leftDrawerOpen,
             toggleLeftDrawer,
-            miniState,
         }
     }
 )

@@ -54,9 +54,6 @@ const $q = useQuasar();
 const store = useDrawerStore();
 
 const search = ref('')
-
-
-// const { leftDrawerOpen } = storeToRefs(store);
 </script>
 
 <style lang="sass">

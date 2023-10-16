@@ -1,30 +1,25 @@
 <template>
-    <q-drawer :v-model="leftDrawerOpen" :breakpoint="600" show-if-above bordered class="YL__drawer" :width="260">
+    <q-drawer v-model="leftDrawerOpen" show-if-above :breakpoint="580" bordered class="YL__drawer" :width="260">
         <q-list padding>
-                <q-item v-for="link in links1" :key="link.text" class="YL__drawer-item"  v-ripple clickable>
-                    <q-item-section avatar>
-                        <q-icon color="white" :name="link.icon" />
-                    </q-item-section>
-                    <q-item-section>
-                        <q-item-label>{{ link.text }}</q-item-label>
-                    </q-item-section>
-                </q-item>
-            </q-list>
+            <q-item v-for="link in links1" :key="link.text" class="YL__drawer-item"  v-ripple clickable>
+                <q-item-section avatar>
+                    <q-icon color="white" :name="link.icon" />
+                </q-item-section>
+                <q-item-section>
+                    <q-item-label>{{ link.text }}</q-item-label>
+                </q-item-section>
+            </q-item>
+        </q-list>
     </q-drawer>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
 import {  useDrawerStore } from '@/stores/drawer';
 import { storeToRefs } from 'pinia';
 
-// const $q = useQuasar();
-
 const store = useDrawerStore();
-const { leftDrawerOpen } = storeToRefs(store);
-// const miniState = computed(() => store.miniState);
-// const drawer = ref<boolean>(leftDrawerOpen);
 
+const { leftDrawerOpen } = storeToRefs(store);
 
 
 const links1 = [
