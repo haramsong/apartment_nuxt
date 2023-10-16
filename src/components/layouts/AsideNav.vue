@@ -1,14 +1,16 @@
 <template>
     <q-drawer v-model="leftDrawerOpen" show-if-above :breakpoint="580" bordered class="YL__drawer" :width="260">
-        <q-list padding>
-            <q-item v-for="link in links1" :key="link.text" class="YL__drawer-item"  v-ripple clickable>
-                <q-item-section avatar>
-                    <q-icon color="white" :name="link.icon" />
-                </q-item-section>
-                <q-item-section>
-                    <q-item-label>{{ link.text }}</q-item-label>
-                </q-item-section>
-            </q-item>
+        <q-list>
+          <q-item-label
+            header
+            class="text-grey-8">
+            Essential Links
+          </q-item-label>
+          <EssentialLink
+            v-for="link in essentialLinks"
+            :key="link.title"
+            v-bind="link">
+          </EssentialLink>
         </q-list>
     </q-drawer>
 </template>
@@ -16,6 +18,7 @@
 <script setup lang="ts">
 import {  useDrawerStore } from '@/stores/drawer';
 import { storeToRefs } from 'pinia';
+import EssentialLink from '/components/EssentialLink.vue'
 
 const store = useDrawerStore();
 
@@ -23,10 +26,52 @@ const { leftDrawerOpen } = storeToRefs(store);
 
 
 const links1 = [
-    { icon: 'home', text: 'Home' },
-    { icon: 'whatshot', text: 'Trending' },
+    { icon: 'home', text: '홈' },
+    { icon: 'whatshot', text: '주민게시판' },
     { icon: 'subscriptions', text: 'Subscriptions' }
 ];
+
+const essentialLinks = [
+  {
+    title: 'Search', caption: 'quasar.dev', icon: 'school',
+    link: 'https://quasar.dev',
+    level: 0,
+    children: [{
+      title: 'Documents', caption: 'quasar.dev', icon: 'school',
+      link: 'https://quasar.dev',
+      level: 1,
+      children: [{
+        title: 'Search (level 3)',
+        caption: 'quasar.dev',
+        icon: 'school',
+        link: 'https://quasar.dev',
+        level: 2,
+        children: []
+      }]
+    }]
+  },
+  {
+    title: 'Github', caption: 'github.com/quasarframework',
+    icon: 'code', link: 'https://github.com/quasarframework',
+    level: 0,
+    children: [{
+      title: 'Github Level 2', caption: 'quasar.dev', icon: 'school',
+      link: 'https://quasar.dev', level: 1,
+      children: []
+    }]
+  },
+  {
+    title: 'Forum', caption: 'forum.quasar.dev',
+    icon: 'record_voice_over', link: 'https://forum.quasar.dev',
+    level: 0,
+    children: [{
+      title: 'Forum Level 2', caption: 'quasar.dev', icon: 'school',
+      link: 'https://quasar.dev',
+      level: 1,
+      children: []
+    }]
+  }
+]
 </script>
 
 <style lang="sass">
