@@ -3,6 +3,7 @@
         <q-list>
           <EssentialLink
             v-for="link in essentialLinks"
+            class="YL__drawer-item"
             :key="link.title"
             v-bind="link">
           </EssentialLink>
@@ -24,7 +25,7 @@ const { leftDrawerOpen } = storeToRefs(store);
 
 const essentialLinks = [
   {
-    title: 'Search', icon: 'school',
+    title: '홈', icon: 'home',
     link: 'https://quasar.dev',
     level: 0,
     children: [{
@@ -35,17 +36,25 @@ const essentialLinks = [
     }]
   },
   {
-    title: 'Github',
+    title: '소통공간',
     icon: 'code', link: 'https://github.com/quasarframework',
     level: 0,
-    children: [{
-      title: 'Github Level 2', icon: 'school',
-      link: 'https://quasar.dev', level: 1,
-      children: []
-    }]
+    children: [
+      {
+        title: '주민게시판', icon: 'school',
+        link: 'https://quasar.dev', level: 1,
+        children: []
+      },
+      {
+        title: '나눔공간', icon: 'school',
+        link: 'https://quasar.dev',
+        level: 1,
+        children: []
+      }
+    ]
   },
   {
-    title: 'Forum',
+    title: '건의사항',
     icon: 'record_voice_over', link: 'https://forum.quasar.dev',
     level: 0,
     children: [{
@@ -67,10 +76,8 @@ const essentialLinks = [
     
   &__drawer-item
     font-size: 1.5rem
-    margin: 1.5rem 0
     padding: 1rem
     color: white
-  
 
   &__drawer-footer-link
     text-decoration: none
