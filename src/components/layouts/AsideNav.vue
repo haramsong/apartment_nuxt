@@ -25,28 +25,26 @@ const { leftDrawerOpen } = storeToRefs(store);
 
 const essentialLinks = [
   {
-    title: '홈', icon: 'home',
+    title: '홈',
+    icon: 'home',
     link: 'https://quasar.dev',
     level: 0,
-    children: [{
-      title: 'Documents', icon: 'school',
-      link: 'https://quasar.dev',
-      level: 1,
-      children: []
-    }]
+    children: []
   },
   {
     title: '소통공간',
-    icon: 'code', link: 'https://github.com/quasarframework',
+    icon: 'code',
+    link: 'https://github.com/quasarframework',
     level: 0,
     children: [
       {
-        title: '주민게시판', icon: 'school',
-        link: 'https://quasar.dev', level: 1,
+        title: '주민게시판',
+        link: 'https://quasar.dev',
+        level: 1,
         children: []
       },
       {
-        title: '나눔공간', icon: 'school',
+        title: '나눔공간',
         link: 'https://quasar.dev',
         level: 1,
         children: []
@@ -55,14 +53,10 @@ const essentialLinks = [
   },
   {
     title: '건의사항',
-    icon: 'record_voice_over', link: 'https://forum.quasar.dev',
+    icon: 'record_voice_over',
+    link: 'https://forum.quasar.dev',
     level: 0,
-    children: [{
-      title: 'Forum Level 2', icon: 'school',
-      link: 'https://quasar.dev',
-      level: 1,
-      children: []
-    }]
+    children: []
   }
 ]
 </script>
