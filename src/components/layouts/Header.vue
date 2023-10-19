@@ -55,26 +55,3 @@ const store = useDrawerStore();
 
 const search = ref('')
 </script>
-
-<style lang="sass">
-.YL
-
-  &__toolbar-input-container
-    min-width: 100px
-    width: 55%
-
-  &__drawer-button
-    font-size: 1rem
-    top: 0
-
-  &__toolbar-input-btn
-    border-radius: 0
-    border-style: solid
-    border-width: 1px 1px 1px 0
-    border-color: rgba(0,0,0,.24)
-    max-width: 60px
-    width: 100%
-
-    &:hover
-      color: #000
-</style>
