@@ -1,11 +1,14 @@
 <template>
     <div>
-        <div v-if="children.length == 0">
+        <div v-if="children.length === 0">
             <q-item clickable v-ripple :inset-level="level">
-                <q-item-section v-if="!!icon">
-                    <q-icon :name="icon" />    
-                </q-item-section>
-                <q-item-section>{{ title }}</q-item-section>
+                <div :class="level === 0 && 'drawer-item-width'">
+                    <q-item-section v-if="!!icon" class="YL__drawer-item_icon">
+                        <q-icon v-if="!!icon" :name="icon" />    
+                    </q-item-section>
+                </div>
+                <q-item-section v-if="level === 0" class="YL__drawer-item_text">{{ title }}</q-item-section>
+                <q-item-section v-else class="YL__drawer-item_text-sub">{{ title }}</q-item-section>
             </q-item>
         </div>
         <div v-else>

@@ -8,6 +8,22 @@
             font-size: 1.5rem; 
             padding: 1rem; 
             color: white;
+            width: 260px;
+            font-family: '강원교육모두 Bold';
+            &_icon {
+                width: 40px!important;
+                // height: 30px;
+                padding-right: 10px;
+                display: inline-block;
+            };
+            &_text {
+                text-align: left;
+            };
+            &_text-sub {
+                padding-right: 20px;
+                text-align: right;
+                font-size: 1rem;
+            };
         }
         &__drawer-footer-link {
             text-decoration: none; 
@@ -18,3 +34,13 @@
             color: #000;
         }
     }
+
+@font-face {
+    font-family: '강원교육모두 Bold';
+    src: local("강원교육모두 Bold"), url('~assets/fonts/강원교육모두 Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+div .drawer-item-width {
+    width: 60px;
+}
