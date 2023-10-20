@@ -33,7 +33,7 @@ const essentialLinks = [
   },
   {
     title: '소통공간',
-    icon: 'code',
+    icon: 'assignment',
     link: 'https://github.com/quasarframework',
     level: 0,
     children: [
@@ -53,7 +53,7 @@ const essentialLinks = [
   },
   {
     title: '건의사항',
-    icon: 'record_voice_over',
+    icon: 'note_alt',
     link: 'https://forum.quasar.dev',
     level: 0,
     children: []

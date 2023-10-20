@@ -2,11 +2,11 @@
     <q-header elevated class="bg-white text-grey-8 q-py-xs" height-hint="58">
         <q-toolbar>
             <q-btn z-max flat dense round @click="store.toggleLeftDrawer()" v-if="!$q.screen.gt.xs" aria-label="Menu" class="YL__drawer-button" icon="menu" />
-            <q-btn flat no-caps no-wrap class="q-ml-xs" v-if="$q.screen.gt.xs">
-                <q-icon :name="fabYoutube" color="red" size="28px" />
-                <q-toolbar-title shrink class="text-weight-bold">
+            <q-btn size="sm" flat no-caps no-wrap class="YL__logo" v-if="$q.screen.gt.xs">
+                <q-icon name="img:/img/logo.svg" class="YL__logo" />
+                <!-- <q-toolbar-title shrink class="text-weight-bold">
                     YouTube
-                </q-toolbar-title>
+                </q-toolbar-title> -->
             </q-btn>
 
             <q-space />
@@ -19,15 +19,6 @@
             <q-space />
 
             <div class="q-gutter-sm row items-center no-wrap">
-                <q-btn round dense flat color="grey-8" icon="video_call" v-if="$q.screen.gt.sm">
-                    <q-tooltip>Create a video or post</q-tooltip>
-                </q-btn>
-                <q-btn round dense flat color="grey-8" icon="apps" v-if="$q.screen.gt.sm">
-                    <q-tooltip>Apps</q-tooltip>
-                </q-btn>
-                <q-btn round dense flat color="grey-8" icon="message" v-if="$q.screen.gt.sm">
-                    <q-tooltip>Messages</q-tooltip>
-                </q-btn>
                 <q-btn round dense flat color="grey-8" icon="notifications">
                     <q-badge color="red" text-color="white" floating>
                         2
