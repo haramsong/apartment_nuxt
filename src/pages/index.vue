@@ -1,9 +1,7 @@
 <template>
-  <q-page-container>
     <q-page>
-        
+        <LayoutsCard />
     </q-page>
-  </q-page-container>
 </template>
 
 <script setup>
