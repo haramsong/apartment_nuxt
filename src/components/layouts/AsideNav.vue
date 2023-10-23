@@ -9,9 +9,6 @@
           </EssentialLink>
         </q-list>
     </q-drawer>
-    <q-page-container class="card-container">
-        <router-view />
-    </q-page-container>
 </template>
 
 <script setup lang="ts">

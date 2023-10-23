@@ -1,5 +1,6 @@
-html {
-    height: 100%;
+html, body {
+    padding: 0;
+    margin: 0;
 }
 
 body::-webkit-scrollbar {
@@ -12,7 +13,6 @@ body {
     /* 인터넷 익스플로러 */
     scrollbar-width: none;
     /* 파이어폭스 */
-
     -webkit-text-size-adjust: none;
     /* 크롬, 사파리, 오페라 신버전 */
     -ms-text-size-adjust: none;
@@ -23,8 +23,8 @@ body {
     /* 오페라 구버전 */
 }
 
-body {
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
+
+.scroll-area {
+    width: 100%;
+    height: 625px;
 }
