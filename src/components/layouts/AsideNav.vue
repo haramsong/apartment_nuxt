@@ -1,5 +1,5 @@
 <template>
-    <q-drawer v-model="leftDrawerOpen" show-if-above :breakpoint="580" bordered class="YL__drawer" :width="260">
+    <q-drawer v-model="leftDrawerOpen" show-if-above :breakpoint="580" bordered class="YL__drawer" :width="230">
         <q-list>
           <EssentialLink
             v-for="link in essentialLinks"
