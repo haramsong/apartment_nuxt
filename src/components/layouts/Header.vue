@@ -4,16 +4,13 @@
             <q-btn z-max flat dense round @click="store.toggleLeftDrawer()" v-if="!$q.screen.gt.xs" aria-label="Menu" class="YL__drawer-button" icon="menu" />
             <q-btn size="sm" flat no-caps no-wrap class="YL__logo" v-if="$q.screen.gt.xs">
                 <q-icon name="img:/img/logo.svg" class="YL__logo" />
-                <!-- <q-toolbar-title shrink class="text-weight-bold">
-                    YouTube
-                </q-toolbar-title> -->
             </q-btn>
 
             <q-space />
 
             <div class="YL__toolbar-input-container row no-wrap">
-                <q-input dense outlined square v-model="search" placeholder="Search" class="bg-white col" />
-                <q-btn class="YL__toolbar-input-btn" color="grey-3" text-color="grey-8" icon="search" unelevated />
+                <q-input dense outlined square v-model="search" placeholder="검색" class="bg-white col" />
+                <q-btn class="YL__toolbar-input-btn" color="blue-2" text-color="blue-8" icon="search" unelevated />
             </div>
 
             <q-space />
