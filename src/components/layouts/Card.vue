@@ -1,13 +1,13 @@
 <template>
         <q-card class="my-card q-ma-lg">
             <q-card-section>
-                <div class="text-h6">안녕하세요</div>
-                <div class="text-subtitle2 text-bold">관리자</div>
+                <span class="text-h6 text-bold">주민게시판</span>
+                <span class="text-subtitle2  float-right">전체보기</span>
               </q-card-section>
-              <!-- 작성일, 조회수 -->
               <q-card-section class="q-pt-none">
-                <span class="text-subtitle2 text-bold">ㅇㅇ</span>
-                <span class="text-subtitle2 float-right">ㅋㅋ</span>
+                <div class="text-subtitle2 text-bold">안녕하세요. 103동 102호 입니다.</div>
+                <div class="text-subtitle2 text-bold">이거 어떻게 쓰나요?</div>
+                <div class="text-subtitle2 text-bold">부탁드립니다.제발 쓰레기좀 여기에....</div>
               </q-card-section>
         </q-card>
 </template>
