@@ -24,25 +24,25 @@ const essentialLinks = [
   {
     title: '홈',
     icon: 'home',
-    link: 'https://quasar.dev',
+    link: '/',
     level: 0,
     children: []
   },
   {
     title: '소통공간',
     icon: 'assignment',
-    link: 'https://github.com/quasarframework',
+    link: '',
     level: 0,
     children: [
       {
         title: '주민게시판',
-        link: 'https://quasar.dev',
+        link: '/community/boards/1',
         level: 1,
         children: []
       },
       {
         title: '나눔공간',
-        link: 'https://quasar.dev',
+        link: '/community/shareplace/1',
         level: 1,
         children: []
       }
@@ -51,7 +51,7 @@ const essentialLinks = [
   {
     title: '건의사항',
     icon: 'note_alt',
-    link: 'https://forum.quasar.dev',
+    link: '/complaint/1',
     level: 0,
     children: []
   }
