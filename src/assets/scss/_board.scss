@@ -31,6 +31,7 @@
     background: $white;
     margin-bottom: 12px;
     flex-wrap: wrap;
+    font-family: 'GmarketSans Medium';
 
     &__list {
         display: block;
@@ -144,6 +145,7 @@
     height: calc(100% - 56px);
     overflow-y: auto;
     min-width: 1240px;
+        font-family: 'GmarketSans Medium';
 }
 
 .page-BoardList {
