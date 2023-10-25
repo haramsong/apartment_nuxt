@@ -3,15 +3,16 @@
     display: flex;
     height: 56px;
     padding: 8px 40px;
+    margin-top: 5px;
     background: #FBFBFC;
     @include shadow;
 
     &__title {
         display: inline-flex;
         align-items: center;
-
+        font-family: 'GmarketSans Bold';
         .sub_title1 {
-            font-size: 18px
+            font-size: 16px
         }
     }
 
