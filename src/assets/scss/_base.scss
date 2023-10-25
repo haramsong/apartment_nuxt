@@ -1,0 +1,2284 @@
+@import '_mixin'; //SCSS에서만 추출해서 쓰는 기존 선언타입
+
+$red: #CD1817; //레드 컬러
+$blue: #006aff;
+$d-navy: #303139; //다크 네이비
+$white: #fff; //화이트
+$black: #363636; //폰트 컬러
+$f_color2: #666; //폰트 컬러
+$f_color3: #999; //폰트 컬러
+$wh100: 100%; //100%
+$font: "suit"; //폰트 이름
+$line_c1: #ccc;
+$line_c2: #e6e6e6;
+$line_c3: #eee;
+
+.t_center {
+    text-align: center !important;
+}
+
+.t_left {
+    text-align: left !important;
+}
+
+.t_right {
+    text-align: right !important;
+}
+
+.f_grow1 {
+    flex-grow: 1 !important;
+}
+
+.f_grow2 {
+    flex-grow: 2 !important;
+}
+
+.f_grow3 {
+    flex-grow: 3 !important;
+}
+
+.f_grow4 {
+    flex-grow: 4 !important;
+}
+
+.f_grow5 {
+    flex-grow: 5 !important;
+}
+
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+.flex-3 {
+    flex: 3;
+}
+
+.flex-4 {
+    flex: 4;
+}
+
+.flex-5 {
+    flex: 5;
+}
+
+.flex-6 {
+    flex: 6;
+}
+
+.flex-7 {
+    flex: 7;
+}
+
+.f-left {
+    justify-content: left !important;
+    ;
+}
+
+.f-right {
+    justify-content: right !important;
+    ;
+}
+
+.f-center {
+    justify-content: center !important;
+    ;
+}
+
+
+
+/* 폰트 사이즈 */
+.fs12 {
+    font-size: 12px !important
+}
+
+.fs13 {
+    font-size: 13px !important
+}
+
+.fs14 {
+    font-size: 14px !important
+}
+
+.fs15 {
+    font-size: 15px !important
+}
+
+.fs16 {
+    font-size: 16px !important
+}
+
+.fs17 {
+    font-size: 17px !important
+}
+
+.fs18 {
+    font-size: 18px !important
+}
+
+.fs19 {
+    font-size: 19px !important
+}
+
+.fs20 {
+    font-size: 20px !important
+}
+
+.f_w {
+    &_normal {
+        font-weight: normal !important
+    }
+
+    &_semi {
+        font-weight: 600 !important
+    }
+
+    &_bold {
+        font-weight: 700 !important
+    }
+}
+
+.f_c {
+    &_red {
+        color: $red !important;
+    }
+
+    &_blue {
+        color: $blue !important;
+    }
+
+    &_black {
+        color: $black !important;
+    }
+
+    &_darkGray {
+        color: $f_color2 !important;
+    }
+
+    &_gray {
+        color: $f_color3 !important;
+    }
+}
+
+.f_c_36 {
+    color: $black !important;
+}
+
+.f_c_666 {
+    color: $f_color2 !important;
+}
+
+.f_c_999 {
+    color: $f_color3 !important;
+}
+
+
+.main_title1 {
+    font-size: 28px;
+    color: $black
+}
+
+.sub_title1 {
+    font-size: 24px;
+    color: $black
+}
+
+.sub_title2 {
+    font-size: 20px;
+    color: $black
+}
+
+.sub_title3 {
+    font-size: 18px;
+    color: $black
+}
+
+.sub_title4 {
+    font-size: 16px;
+    font-weight: 400;
+    color: $black
+}
+
+#__nuxt {
+    height: 100%;
+}
+
+
+.flex_align {
+    display: flex;
+
+    &.row {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &.column {
+        flex-direction: column;
+    }
+}
+
+
+.button__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .button {
+        margin-right: 12px;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+}
+
+.button {
+    @include flex_center;
+    cursor: pointer;
+
+    &:focus,
+    &:active {}
+
+    &__Big {
+        //.buttop__Big
+        height: 40px;
+        font-size: 15px;
+        font-weight: 600;
+        @include radius(4px);
+    }
+
+    &__Basic {
+        //.button__Basic
+        height: 36px;
+        font-size: 14px;
+        @include radius(3px);
+    }
+
+    &__Small {
+        //.button__Small
+        height: 32px;
+        font-size: 13px;
+        @include radius(3px);
+    }
+
+    &__red {
+        //.button__red 버튼 배경
+        background: $red !important;
+        color: $white;
+
+        span {
+            color: $white;
+        }
+    }
+
+    &__gray {
+        //.button__gray 버튼 배경
+        background: #ccc !important;
+        color: $white;
+        transition: all .3s;
+        border: none !important;
+
+        &:hover {
+            background: #363636;
+        }
+
+        span {
+            color: $white;
+        }
+    }
+
+    &__gray2 {
+        //.button__gray 버튼 배경
+        background: #999 !important;
+        color: $white;
+        transition: all .3s;
+        border: none !important;
+
+        span {
+            color: $white;
+        }
+    }
+
+    &__darkGray {
+        //.button__gray 버튼 배경
+        background: #666 !important;
+        color: $white;
+        transition: all .3s;
+        border: none !important;
+    }
+
+    &__black {
+        //.button__black 버튼 배경
+        background: #363636 !important;
+        color: $white;
+        border: none !important;
+
+        span {
+            color: $white;
+        }
+    }
+
+    &__blue {
+        //.button__black 버튼 배경
+        background: $blue !important;
+        color: $white;
+        border: none !important;
+
+        span {
+            color: $white;
+        }
+    }
+
+    &__white {
+        //.button__white 버튼 화이트
+        background: $white;
+        border: 1px solid #999;
+        color: #666;
+
+        &:focus,
+        &:active {
+            border-color: #363636;
+        }
+
+        span {
+            color: #666;
+        }
+    }
+
+    &__black_line {
+        //.button__black_line 버튼 배경
+        background: $white;
+        border: 1px solid #363636 !important;
+        color: #363636 !important;
+    }
+
+    &__darkGray_line {
+        //.button__black_line 버튼 배경
+        background: $white;
+        border: 1px solid #666 !important;
+    }
+
+    &__gray_line2 {
+        //.button__black_line 버튼 배경
+        background: $white;
+        border: 1px solid #999 !important;
+    }
+
+    &__gray_line {
+        //.button__black_line 버튼 배경
+        background: $white;
+        border: 1px solid #ccc !important;
+    }
+
+    &__red_line {
+        background: $white;
+        border: 1px solid $red !important;
+        color: $red !important;
+    }
+
+    &__blue_line {
+        background: $white;
+        border: 1px solid $blue !important;
+        color: $blue !important;
+    }
+
+    &__round {
+        @include radius(30px);
+    }
+
+    &:disabled {
+        background: #ccc !important;
+        color: $white !important;
+        cursor: not-allowed;
+
+        a,
+        button {
+            color: $white !important;
+        }
+    }
+}
+
+
+// 보안문서 아이콘
+.security_ico {
+    display: flex;
+    align-items: center;
+}
+
+.issue_ico {
+    display: flex;
+    align-items: center;
+
+    img {
+        height: 18px;
+    }
+}
+
+/* 구글 폰트 채우기 */
+.google_fill {
+    font-variation-settings: 'FILL' 1;
+}
+
+.border-color {
+    &_cc {
+        border-color: #ccc !important;
+    }
+
+    &_e6 {
+        border-color: #e6e6e6 !important;
+    }
+}
+
+
+//파일 첨부 리스트 부분 영역
+.file_upload {
+    display: flex;
+
+    &_list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &_item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: #666;
+        justify-content: left;
+        margin: 12px 0 8px;
+
+        .icon-ic_clip {
+            color: #999;
+        }
+
+        span.mgL8 {
+            color: #363636;
+            text-decoration: underline;
+            cursor: pointer;
+            @include ellipsis(2);
+            position: relative;
+
+            button {
+                cursor: pointer;
+                text-align: left;
+            }
+
+            &:hover {
+                color: #363636;
+            }
+
+            &:before {
+                @include befo_after;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background: #999;
+            }
+        }
+
+        .upload_del_btn {
+            cursor: pointer;
+            margin-left: 12px;
+
+            .icon-ic_x {
+                font-size: 10px;
+            }
+
+            &:hover {
+                color: #363636;
+            }
+        }
+    }
+
+    .file_privew_img {
+        width: 40px;
+        height: 40px;
+        background-color: #fff;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        flex: 40px 0 0;
+        @include radius(3px);
+
+        &:before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            background-size: 16px 16px;
+            background-color: rgba(25, 25, 25, 0.5);
+            color: $white;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            pointer-events: none;
+        }
+
+        &:hover:before {
+            opacity: 1;
+            transition: all .2s;
+        }
+    }
+
+    .file_thum {
+        @include flex_center;
+        @include line(1px, solid, #e6e6e6, 3px);
+        overflow: hidden;
+        flex: 40px 0 0;
+
+        &_icon {
+            width: 25px;
+            height: 32px;
+            background-size: 25px 32px;
+
+            &.hwp {
+                @include bg('hwp', '@/assets/images/file/', 'svg');
+            }
+
+            &.doc {
+                @include bg('doc', '@/assets/images/file/', 'svg');
+            }
+
+            &.docs {
+                @include bg('docs', '@/assets/images/file/', 'svg');
+            }
+
+            &.xls {
+                @include bg('xls', '@/assets/images/file/', 'svg');
+            }
+
+            &.xlsx {
+                @include bg('xlsx', '@/assets/images/file/', 'svg');
+            }
+
+            &.ppt {
+                @include bg('ppt', '@/assets/images/file/', 'svg');
+            }
+
+            &.pptx {
+                @include bg('pptx', '@/assets/images/file/', 'svg');
+            }
+
+            &.cvs {
+                @include bg('cvs', '@/assets/images/file/', 'svg');
+            }
+
+            &.txt {
+                @include bg('txt', '@/assets/images/file/', 'svg');
+            }
+
+            &.pdf {
+                @include bg('pdf', '@/assets/images/file/', 'svg');
+            }
+        }
+    }
+}
+
+//X버튼 공통 타입
+.x_icon_btn {
+    margin: 0 0 0 auto;
+    @include flex_center;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    cursor: pointer;
+
+    .icon-ic_x {
+        position: relative;
+        font-size: 8px;
+    }
+
+    &.BigType {
+        .icon-ic_x {
+            position: relative;
+            font-size: 16px;
+            font-weight: 700;
+            color: $black;
+        }
+    }
+}
+
+
+//일반 텍스트형태의 버튼 타입의 경우
+.textType-btn {
+    display: inline-flex;
+    align-items: flex-end;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+        color: $red;
+        transition: all 0.3s;
+    }
+
+    &.redColor {
+        color: $red;
+    }
+
+    &.underline {
+        text-decoration: underline;
+    }
+
+    &.noneHover {
+        &:hover {
+            color: $black;
+        }
+    }
+}
+
+.textType {
+    font-weight: 600;
+    position: relative;
+
+    &.underline {
+        &:before {
+            @include befo_after;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background: $black;
+        }
+    }
+}
+
+//경고 관련 코멘트 영역
+.warning_comment {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    &_txt {
+        font-size: 15px;
+        color: $red;
+    }
+}
+
+//테이블 모양 타입의 인풋 스타일
+.subject-tdType {
+    display: flex;
+    width: 100%;
+    min-height: 48px;
+    position: relative;
+
+    &_input {
+        width: 100%;
+        height: 100%;
+        transition: all .3s;
+
+        &:focus {
+            outline: none;
+            border-color: #363636;
+        }
+
+        .el-input.large {
+            width: 100%;
+            border: 1px solid #e6e6e6;
+            height: 48px;
+            transition: all .3s;
+
+            .el-input__wrapper {
+                padding-left: 155px;
+                @include radius(0);
+                box-shadow: 0 0 0 1px #ccc inset;
+            }
+        }
+    }
+
+    &_tit {
+        position: absolute;
+        width: 144px;
+        display: flex;
+        align-items: center;
+        color: $f_color2;
+        font-size: 15px;
+        padding: 8px 0 8px 24px;
+        background: #f8f8f8;
+        width: 144px;
+        top: 1px;
+        height: 46px;
+        left: 1px;
+        border-right: 1px solid #ccc;
+        color: #363636;
+        font-weight: 600;
+    }
+
+    .essential_type {
+        top: -8px;
+    }
+}
+
+
+/**/
+.dis_in_flex {
+    display: inline-flex;
+    align-items: center;
+}
+
+.toolTip {
+    //툴팁
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    margin-left: 4px;
+
+    &_queMark {
+        //툴팁 물음표 마크
+        width: 14px;
+        height: 14px;
+        border: 1px solid #999;
+        @include radius(50%);
+        @include flex_center;
+
+        .icon-ic_que_mark {
+            font-size: 6px;
+            color: #999;
+        }
+    }
+
+    .toolTip_overView {
+        //툴팁 마우스 오버시 나타나는 정보 영역
+        opacity: 0;
+        display: none;
+        position: absolute;
+        left: 24px;
+        top: -8px;
+        display: flex;
+        align-items: center;
+        background: $white;
+        border: 1px solid #ccc;
+        padding: 4px;
+        @include radius(3px);
+        font-size: 12px;
+        padding: 12px 16px;
+        line-height: 18px;
+
+        &:before {
+            @include befo_after;
+            left: -5px;
+            width: 8px;
+            height: 8px;
+            top: 23px;
+            transform: rotate(45deg);
+            background: $white;
+            border: 1px solid #ccc;
+            border-width: 0 0 1px 1px;
+        }
+    }
+
+    &_queMark:hover {
+        border-color: #363636;
+        background-color: #363636;
+
+        .icon-ic_que_mark {
+            color: $white;
+        }
+    }
+
+    &_queMark:hover+.toolTip_overView {
+        opacity: 1;
+        display: flex;
+        width: 265px;
+    }
+}
+
+
+.warning_icon {
+    //경고 아이콘 - 동그라미 안에 있는 느낌표
+    @include flex_center;
+    width: 14px;
+    height: 14px;
+    border: 1px solid $red;
+    @include radius(50%);
+    margin-right: 4px;
+    display: inline-flex;
+
+    .icon-ic_exlcude {
+        font-size: 6px;
+    }
+
+    &.gray {
+        color: #666;
+        border-color: #666;
+
+        .icon-ic_exlcude {
+            color: #666;
+
+            &:before {
+                color: #666;
+            }
+        }
+    }
+}
+
+
+/* 커스텀 셀렉트 박스 */
+.selectbox {
+    display: inline-flex;
+    width: 100%;
+    min-width: 150px;
+    background-color: $white;
+    border-radius: 2px;
+    transition: all .3s ease;
+    position: relative;
+    font-size: 14px;
+    color: #363636;
+    @include radius(3px);
+
+    .el-popper__arrow {
+        display: none;
+    }
+
+    .el-input.is-focus .el-input__wrapper {
+        outline: none;
+        box-shadow: none !important;
+        border-color: #363636;
+    }
+
+    .el-input--large {
+        height: 44px;
+    }
+
+    .el-icon svg {
+        color: #363636;
+    }
+
+    &_label {
+        cursor: pointer;
+        display: flex;
+        padding: 16px;
+        width: 100%;
+        align-items: center;
+
+        &_arrow {
+            border: 1px solid #666;
+            border-width: 0 1px 1px 0;
+            display: flex;
+            height: 8px;
+            position: relative;
+            width: 8px;
+            pointer-events: none;
+            transform: rotate(45deg);
+            transition: all .15s ease-in-out;
+            top: -2px;
+            margin-left: auto;
+        }
+
+        &_name {
+            display: inline-block;
+            @include ellipsis;
+        }
+    }
+
+    &.active {
+        //selectbox div에 active 클래스가 추가되었을때
+        border-color: #666;
+
+        .selectbox_label_arrow {
+            border-color: #363636;
+            -webkit-transform: rotate(45deg) scale(-1);
+            -ms-transform: rotate(45deg) scale(-1);
+            transform: rotate(45deg) scale(-1);
+            top: 3px;
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &_menu {
+        //하위 selectbox 메뉴 영역
+        width: 100%;
+        display: block;
+        height: 0;
+        opacity: 0;
+        border: 1px solid #666;
+        position: absolute;
+        left: 0;
+        top: 46px;
+        background: $white;
+        @include radius(3px);
+        max-height: 180px;
+        visibility: hidden;
+        z-index: 10;
+
+        &_item {
+            font-size: 15px;
+            display: inline-block;
+            align-items: center;
+            height: 32px;
+            width: 100%;
+            cursor: pointer;
+            padding: 4px 8px;
+            @include ellipsis;
+            line-height: 1.5;
+
+            &:hover {
+                background: #efefef;
+            }
+        }
+
+        &.active {
+            height: 160px;
+            opacity: 1;
+            overflow-y: auto;
+            visibility: visible;
+            padding: 4px 4px;
+        }
+    }
+}
+
+
+/* 날짜별 입력 타입 */
+.date-calender {
+    float: left;
+    transition: all 0.5s;
+    position: relative;
+    height: 44px;
+
+    &_cal {
+        position: relative;
+        background: url("../images/cal_ico.svg") no-repeat right 16px center $white;
+        width: 140px;
+        height: 100%;
+        font-size: 13px;
+        border-radius: 3px;
+        border: 1px solid #d8d8d8;
+        padding: 12px 36px 12px 16px;
+
+        &::-webkit-clear-button,
+        &::-webkit-innder-spin-button {
+            display: none
+        }
+
+        &::-webkit-calendar-picker-indicator {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            color: transparent;
+            cursor: pointer;
+        }
+
+        &:hover,
+        &:focus {
+            outline: 0;
+            border-color: #363636;
+        }
+    }
+}
+
+/* 날짜별 입력 타입 */
+.date-time {
+    float: left;
+    transition: all 0.5s;
+    position: relative;
+    height: 44px;
+
+    &_input {
+        position: relative; //background:url("../images/cal_ico.svg") no-repeat right 16px center $white;
+        width: 140px;
+        height: 100%;
+        font-size: 13px;
+        border-radius: 3px;
+        border: 1px solid #d8d8d8;
+        padding: 12px 36px 12px 16px;
+
+        &::-webkit-clear-button,
+        &::-webkit-innder-spin-button {
+            display: none
+        }
+
+        &::-webkit-calendar-picker-indicator {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            color: transparent;
+            cursor: pointer;
+        }
+
+        &:hover,
+        &:focus {
+            outline: 0;
+            border-color: #363636;
+        }
+    }
+
+}
+
+/* 커스텀 라디오 버튼 스타일 */
+.radio-box {
+    display: flex;
+    position: relative;
+
+    &_btn {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+    }
+
+    &_btn+&_name {
+        //라디오 + 네임 같이 사용시 Label
+        display: flex;
+        height: 100%;
+        position: relative;
+        cursor: pointer;
+        padding-left: 24px;
+        align-items: center;
+
+        .r_circle {
+            //서클타입
+            position: relative;
+            @include flex_center;
+        }
+
+        &::before {
+            @include befo_after;
+            width: 16px;
+            height: 16px;
+            transition: all 0.3s ease-in-out;
+            left: 0;
+            top: 50%;
+            background: transparent;
+            @include radius(20px);
+            border: 1px solid transparent;
+            transform: translateY(-50%);
+        }
+
+        &::after {
+            @include befo_after;
+            width: 16px;
+            height: 16px;
+            transition: all 0.3s ease-in-out;
+            left: 0;
+            top: 50%;
+            background: $white;
+            @include radius(20px);
+            border: 1px solid $line_c2;
+            transform: translateY(-50%);
+        }
+    }
+
+    &_btn:focus+&_name {
+
+        //라디오 포커스 경우
+        &::before {
+            border-color: $red;
+        }
+    }
+
+    &_btn:checked+&_name {
+
+        //라디오 체크 경우
+        &::before {
+            background: $red;
+        }
+
+        &::after {
+            width: 8px;
+            height: 8px;
+            left: 4px;
+            background: $white;
+            border-color: $white;
+        }
+    }
+
+}
+
+
+/* 체크박스 스타일 */
+.check-box {
+    display: flex;
+    position: relative;
+
+    &_btn {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+    }
+
+    &_btn+&_name {
+        //체크박스 + 네임 같이 사용시 Label
+        display: flex;
+        height: 100%;
+        position: relative;
+        cursor: pointer;
+        padding-left: 22px;
+        align-items: center;
+
+        &::after {
+            @include befo_after;
+            width: 16px;
+            height: 16px;
+            left: 3px;
+            border: 1px solid #dfdfdf;
+            background: $white;
+            transition: all 0.2s;
+        }
+
+        .arrow {
+            position: absolute;
+            height: 6px;
+            width: 10px;
+            left: 6px;
+            top: 3px;
+            transform: rotate(-45deg);
+            z-index: 3;
+            display: block;
+
+            &::before {
+                @include befo_after;
+                left: 0;
+                top: 0;
+                width: 2px;
+                height: 0;
+                transition: all 0.2s linear 0.2s;
+                background: $white;
+                content: "";
+            }
+
+            &::after {
+                @include befo_after;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 2px;
+                transition: all 0.2s;
+                background: $white;
+                content: "";
+            }
+        }
+    }
+
+    &_btn:focus+&_name {
+
+        //체크박스 포커스 경우
+        &::before {
+            border-color: $red;
+        }
+    }
+
+    &_btn:checked+&_name {
+
+        //체크박스 체크 경우
+        &::after {
+            background: $red;
+            border-color: $red;
+        }
+
+        .arrow {
+            &::before {
+                height: 100%;
+                transition: all 0.2s;
+            }
+
+            &::after {
+                width: 100%;
+                transition: all 0.2s linear 0.2s;
+            }
+        }
+    }
+}
+
+/* 필수값 입력 영역
+   el-폼으로 들어가게 되는 경우에는 포지션 사용필요
+*/
+.essential_type {
+    position: relative;
+    top: 0;
+
+    &:after {
+        content: "";
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background: #FF1010;
+        position: absolute;
+        right: -5px;
+        top: 3px;
+    }
+
+    .el-form-item__label {
+        position: relative;
+
+        &:after {
+            content: "";
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: #FF1010;
+            position: absolute;
+            right: -5px;
+            top: 3px;
+        }
+    }
+
+}
+
+/* 화살표 노출 타입 */
+.arrow_ico {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+
+    &.right {
+        width: 8px;
+        height: 8px;
+        @include line(2px, solid, $white, 0);
+        border-width: 2px 2px 0 0;
+        transform: rotate(45deg);
+    }
+
+    &.left {
+        width: 8px;
+        height: 8px;
+        @include line(2px, solid, $white, 0);
+        border-width: 0 0 2px 2px;
+        transform: rotate(45deg);
+    }
+
+    &.bottom {
+        width: 8px;
+        height: 8px;
+        @include line(2px, solid, $white, 0);
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+        top: -2px;
+    }
+
+    &.top {
+        width: 8px;
+        height: 8px;
+        @include line(2px, solid, $white, 0);
+        border-width: 2px 0 0 2px;
+        transform: rotate(45deg);
+        top: 2px;
+    }
+}
+
+/* 코멘트 타입 */
+
+.comment {
+    color: #999;
+    display: block;
+    line-height: 20px;
+
+    &_red {
+        color: $red;
+    }
+
+    &_13 {
+        font-size: 13px;
+    }
+
+    &_12 {
+        font-size: 12px;
+    }
+
+    &_gray {
+        color: #666;
+    }
+
+    .warning_icon {
+        //경고 아이콘 - 동그라미 안에 있는 느낌표
+        border-color: #666;
+
+        .icon-ic_exlcude {
+            color: #666;
+            font-size: 6px;
+
+            &:before {
+                color: #666;
+            }
+        }
+    }
+}
+
+/* 빨간색으로 경고 및 중요 코멘트 영역*/
+.red_comment {
+    color: $red;
+}
+
+.placeholder {
+    input::placeholder {
+        font-size: 13px;
+        color: #999;
+    }
+}
+
+
+
+[class*="col-"] {
+    float: left;
+    margin: 0 12px;
+}
+
+.col-1 {
+    width: calc(8.33% - 24px);
+}
+
+.col-2 {
+    width: calc(16.66% - 24px);
+}
+
+.col-3 {
+    width: calc(25% - 24px);
+}
+
+.col-4 {
+    width: calc(33.33% - 24px);
+}
+
+.col-5 {
+    width: calc(41.66% - 24px);
+}
+
+.col-6 {
+    width: calc(50% - 24px);
+}
+
+.col-7 {
+    width: calc(58.33% - 24px);
+}
+
+.col-8 {
+    width: calc(66.66% - 24px);
+}
+
+.col-9 {
+    width: calc(75% - 24px);
+}
+
+.col-10 {
+    width: calc(83.33% - 24px);
+}
+
+.col-11 {
+    width: calc(91.66% - 24px);
+}
+
+.col-12 {
+    width: calc(100% - 24px);
+}
+
+/* 너비 지정 스타일 */
+.w100 {
+    width: 100% !important;
+}
+
+.w80 {
+    width: 80% !important;
+}
+
+.w75 {
+    width: 75% !important;
+}
+
+.w70 {
+    width: 70% !important;
+}
+
+.w65 {
+    width: 65% !important;
+}
+
+.w60 {
+    width: 60% !important;
+}
+
+.w55 {
+    width: 55% !important;
+}
+
+.w50 {
+    width: 50% !important;
+}
+
+.w45 {
+    width: 45% !important;
+}
+
+.w40 {
+    width: 40% !important;
+}
+
+.w35 {
+    width: 35% !important;
+}
+
+.w30 {
+    width: 30% !important;
+}
+
+.w25 {
+    width: 25% !important;
+}
+
+.w20 {
+    width: 20% !important;
+}
+
+.w15 {
+    width: 15% !important;
+}
+
+.w10 {
+    width: 10% !important;
+}
+
+.w30p {
+    width: 30px !important;
+}
+
+.w40p {
+    width: 40px !important;
+}
+
+.w44p {
+    width: 44px !important;
+}
+
+.w48p {
+    width: 48px !important;
+}
+
+.w52p {
+    width: 52px !important;
+}
+
+.w56p {
+    width: 56px !important;
+}
+
+.w60p {
+    width: 60px !important;
+}
+
+.w64p {
+    width: 64px !important;
+}
+
+.w68p {
+    width: 68px !important;
+}
+
+.w72p {
+    width: 72px !important;
+}
+
+.w76p {
+    width: 76px !important;
+}
+
+.w80p {
+    width: 80px !important;
+}
+
+.w84p {
+    width: 84px !important;
+}
+
+.w88p {
+    width: 88px !important;
+}
+
+.w92p {
+    width: 92px !important;
+}
+
+.w96p {
+    width: 96px !important;
+}
+
+.w100p {
+    width: 100px !important;
+}
+
+.w104p {
+    width: 104px !important;
+}
+
+.w108p {
+    width: 108px !important;
+}
+
+.w110p {
+    width: 110px !important;
+}
+
+.w110p {
+    width: 112px !important;
+}
+
+.w120p {
+    width: 120px !important;
+}
+
+.w124p {
+    width: 124px !important;
+}
+
+.w128p {
+    width: 128px !important;
+}
+
+.w132p {
+    width: 132px !important;
+}
+
+.w136p {
+    width: 136px !important;
+}
+
+.w140p {
+    width: 140px !important;
+}
+
+.w144p {
+    width: 144px !important;
+}
+
+.w148p {
+    width: 148px !important;
+}
+
+.w152p {
+    width: 152px !important;
+}
+
+.w156p {
+    width: 156px !important;
+}
+
+.w160p {
+    width: 160px !important;
+}
+
+.w176p {
+    width: 176px !important;
+}
+
+.w180p {
+    width: 180px !important;
+}
+
+.w200p {
+    width: 200px !important;
+}
+
+.w210p {
+    width: 210px !important;
+}
+
+.w220p {
+    width: 220px !important;
+}
+
+.w230p {
+    width: 230px !important;
+}
+
+.w240p {
+    width: 240px !important;
+}
+
+.w250p {
+    width: 250px !important;
+}
+
+.w260p {
+    width: 260px !important;
+}
+
+.w280p {
+    width: 280px !important;
+}
+
+.w300p {
+    width: 300px !important;
+}
+
+.w320p {
+    width: 320px !important;
+}
+
+.w324p {
+    width: 324px !important;
+}
+
+.w328p {
+    width: 328px !important;
+}
+
+.w350p {
+    width: 350px !important;
+}
+
+.w380p {
+    width: 380px !important;
+}
+
+.w400p {
+    width: 400px !important;
+}
+
+.w420p {
+    width: 420px !important;
+}
+
+.w440p {
+    width: 440px !important;
+}
+
+.w450p {
+    width: 450px !important;
+}
+
+.w460p {
+    width: 460px !important;
+}
+
+.w464p {
+    width: 464px !important;
+}
+
+.w468p {
+    width: 468px !important;
+}
+
+.w472p {
+    width: 472px !important;
+}
+
+.w476p {
+    width: 476px !important;
+}
+
+.w480p {
+    width: 480px !important;
+}
+
+.w484p {
+    width: 484px !important;
+}
+
+.w500p {
+    width: 500px !important;
+}
+
+.w550p {
+    width: 550px !important;
+}
+
+.w564p {
+    width: 564px !important;
+}
+
+.w600p {
+    width: 600px !important;
+}
+
+.w818p {
+    width: 818px !important;
+}
+
+.w996p {
+    width: 996px !important;
+}
+
+.w1142p {
+    width: 1142px !important;
+}
+
+.h100 {
+    height: 100% !important
+}
+
+.h12p {
+    height: 12px !important;
+}
+
+.h16p {
+    height: 16px !important;
+}
+
+.h20p {
+    height: 20px !important;
+}
+
+.h24p {
+    height: 24px !important;
+}
+
+.h28p {
+    height: 28px !important;
+}
+
+.h32p {
+    height: 32px !important;
+}
+
+.h36p {
+    height: 36px !important;
+}
+
+.h40p {
+    height: 40px !important;
+}
+
+.h44p {
+    height: 44px !important;
+}
+
+.h48p {
+    height: 48px !important;
+}
+
+.h52p {
+    height: 52px !important;
+}
+
+.h56p {
+    height: 56px !important;
+}
+
+.h60p {
+    height: 60px !important;
+}
+
+
+.mg0 {
+    margin: 0 !important;
+}
+
+.mgT0 {
+    margin-top: 0px !important;
+}
+
+.mgT4 {
+    margin-top: 4px !important;
+}
+
+.mgT8 {
+    margin-top: 8px !important;
+}
+
+.mgT12 {
+    margin-top: 12px !important;
+}
+
+.mgT16 {
+    margin-top: 16px !important;
+}
+
+.mgT20 {
+    margin-top: 20px !important;
+}
+
+.mgT24 {
+    margin-top: 24px !important;
+}
+
+.mgT28 {
+    margin-top: 28px !important;
+}
+
+.mgT32 {
+    margin-top: 32px !important;
+}
+
+.mgT36 {
+    margin-top: 36px !important;
+}
+
+.mgT40 {
+    margin-top: 40px !important;
+}
+
+.mgB0 {
+    margin-bottom: 0px !important;
+}
+
+.mgB4 {
+    margin-bottom: 4px !important;
+}
+
+.mgB8 {
+    margin-bottom: 8px !important;
+}
+
+.mgB12 {
+    margin-bottom: 12px !important;
+}
+
+.mgB16 {
+    margin-bottom: 16px !important;
+}
+
+.mgB20 {
+    margin-bottom: 20px !important;
+}
+
+.mgB24 {
+    margin-bottom: 24px !important;
+}
+
+.mgB28 {
+    margin-bottom: 28px !important;
+}
+
+.mgB32 {
+    margin-bottom: 32px !important;
+}
+
+.mgB36 {
+    margin-bottom: 36px !important;
+}
+
+.mgB40 {
+    margin-bottom: 40px !important;
+}
+
+.mgR0 {
+    margin-right: 0 !important;
+}
+
+.mgR4 {
+    margin-right: 4px !important;
+}
+
+.mgR8 {
+    margin-right: 8px !important;
+}
+
+.mgR12 {
+    margin-right: 12px !important;
+}
+
+.mgR16 {
+    margin-right: 16px !important;
+}
+
+.mgR20 {
+    margin-right: 20px !important;
+}
+
+.mgR24 {
+    margin-right: 24px !important;
+}
+
+.mgR28 {
+    margin-right: 28px !important;
+}
+
+.mgR32 {
+    margin-right: 32px !important;
+}
+
+.mgR36 {
+    margin-right: 36px !important;
+}
+
+.mgR40 {
+    margin-right: 40px !important;
+}
+
+.mgL0 {
+    margin-left: 0 !important;
+}
+
+.mgL4 {
+    margin-left: 4px !important;
+}
+
+.mgL8 {
+    margin-left: 8px !important;
+}
+
+.mgL12 {
+    margin-left: 12px !important;
+}
+
+.mgL16 {
+    margin-left: 16px !important;
+}
+
+.mgL20 {
+    margin-left: 20px !important;
+}
+
+.mgL24 {
+    margin-left: 24px !important;
+}
+
+.mgL28 {
+    margin-left: 28px !important;
+}
+
+.mgL32 {
+    margin-left: 32px !important;
+}
+
+.mgL36 {
+    margin-left: 36px !important;
+}
+
+.mgL40 {
+    margin-left: 40px !important;
+}
+
+.mg20 {
+    margin: 20px 0 !important;
+}
+
+.mg30 {
+    margin: 30px 0 !important;
+}
+
+.mgLAuto {
+    margin-left: auto !important;
+}
+
+.mgRAuto {
+    margin-right: auto !important;
+}
+
+.pd0 {
+    padding: 0 !important;
+}
+
+.pdT0 {
+    padding-top: 0px !important;
+}
+
+.pdT4 {
+    padding-top: 4px !important;
+}
+
+.pdT8 {
+    padding-top: 8px !important;
+}
+
+.pdT12 {
+    padding-top: 12px !important;
+}
+
+.pdT16 {
+    padding-top: 16px !important;
+}
+
+.pdT20 {
+    padding-top: 20px !important;
+}
+
+.pdT24 {
+    padding-top: 24px !important;
+}
+
+.pdT28 {
+    padding-top: 28px !important;
+}
+
+.pdT32 {
+    padding-top: 32px !important;
+}
+
+.pdT36 {
+    padding-top: 36px !important;
+}
+
+.pdT40 {
+    padding-top: 40px !important;
+}
+
+.pdB0 {
+    padding-bottom: 0px !important;
+}
+
+.pdB4 {
+    padding-bottom: 4px !important;
+}
+
+.pdB8 {
+    padding-bottom: 8px !important;
+}
+
+.pdB12 {
+    padding-bottom: 12px !important;
+}
+
+.pdB16 {
+    padding-bottom: 16px !important;
+}
+
+.pdB20 {
+    padding-bottom: 20px !important;
+}
+
+.pdB24 {
+    padding-bottom: 24px !important;
+}
+
+.pdB28 {
+    padding-bottom: 28px !important;
+}
+
+.pdB32 {
+    padding-bottom: 32px !important;
+}
+
+.pdB36 {
+    padding-bottom: 36px !important;
+}
+
+.pdB40 {
+    padding-bottom: 40px !important;
+}
+
+.pdR4 {
+    padding-right: 4px !important;
+}
+
+.pdR8 {
+    padding-right: 8px !important;
+}
+
+.pdR12 {
+    padding-right: 12px !important;
+}
+
+.pdR16 {
+    padding-right: 16px !important;
+}
+
+.pdR20 {
+    padding-right: 20px !important;
+}
+
+.pdR24 {
+    padding-right: 24px !important;
+}
+
+.pdR28 {
+    padding-right: 28px !important;
+}
+
+.pdR32 {
+    padding-right: 32px !important;
+}
+
+.pdR36 {
+    padding-right: 36px !important;
+}
+
+.pdR40 {
+    padding-right: 40px !important;
+}
+
+.pdL4 {
+    padding-left: 4px !important;
+}
+
+.pdL8 {
+    padding-left: 8px !important;
+}
+
+.pdL12 {
+    padding-left: 12px !important;
+}
+
+.pdL16 {
+    padding-left: 16px !important;
+}
+
+.pdL20 {
+    padding-left: 20px !important;
+}
+
+.pdL24 {
+    padding-left: 24px !important;
+}
+
+.pdL28 {
+    padding-left: 28px !important;
+}
+
+.pdL32 {
+    padding-left: 32px !important;
+}
+
+.pdL36 {
+    padding-left: 36px !important;
+}
+
+.pdL40 {
+    padding-left: 40px !important;
+}
+
+.pd20 {
+    padding: 20px !important;
+}
+
+.pdLR24 {
+    padding: 0 24px !important
+}
+
+.g_font_wgt {
+    &_basic {
+        font-variation-settings: 'wght' 300;
+    }
+
+    &_bold {
+        font-variation-settings: 'wght' 500;
+    }
+}
+
+.border-none {
+    &_all {
+        border: 0 !important;
+    }
+
+    &_bottom {
+        border-bottom: 0 !important;
+    }
+
+    &_top {
+        border-top: 0 !important;
+    }
+}
+
+
+.auto_hidden_input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    z-index: -10;
+}
+
+/*
+.date-calender input {background: #f5f5f5;height: 100%;float: left;width: 110px !important;font-size: 13px;border-radius: 5px;padding: 2px 27px 2px 5px !important; border: 1px solid #d8d8d8; border-bottom-width: 2px; outline: none;}
+.date-calender input:focus {border-bottom-color:#2162b1; transition: all 0.5s;}
+.date-calender a.cal_icon {margin: 0;float: left;background: url(images/cal_icon.png) no-repeat 0 0;width: 23px;height: 23px;cursor: pointer;transition: all 0.5s;position: absolute;right: 2px;top: 1px;background-size: 23px;}
+.date-calender a.cal_icon:hover {background-position: 0 -26px;}
+
+
+
+::-webkit-scrollbar {
+    width: 6px;
+    background: transparent;
+    padding: 2px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #e6e6e6;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 3x solid transparent;
+    &:hover {
+        background-color: #666; transition: all 0.5s;
+    }
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+
+}
+
+*/
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background: transparent;
+    padding: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #e6e6e6;
+    border-radius: 6px;
+    background-clip: padding-box;
+    border: 3x solid transparent;
+
+    &:hover {
+        background-color: #c6c6c6;
+        transition: all 0.5s;
+    }
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 50px $white inset !important;
+}
+
+input:-internal-autofill-selected {
+    background-color: $white !important;
+}
+
+
+.error-cont {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    margin-top: 80px;
+
+    h3 {
+        font-size: 28px;
+        color: #363636;
+        font-weight: 400;
+        margin: 36px 0 24px
+    }
+
+    img {
+        width: 512px;
+    }
+
+    p {
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 28px;
+        text-align: center;
+    }
+
+    .error_btn {
+        width: 260px;
+        height: 68px;
+        font-size: 20px;
+        font-weight: 300;
+        margin-top: 56px;
+
+        &:after {
+            content: "";
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            width: 10px;
+            height: 10px;
+            border: 2px solid #fff;
+            border-width: 2px 2px 0 0;
+            transform: rotate(45deg);
+            margin-left: 20px
+        }
+    }
+}
