@@ -23,10 +23,10 @@
                     <q-tooltip>Notifications</q-tooltip>
                 </q-btn>
                 <q-btn round flat>
-                    <q-avatar size="26px">
-                        <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+                    <q-avatar size="35px">
+                        <img src="/img/person-circle-sharp.svg">
                     </q-avatar>
-                    <q-tooltip>Account</q-tooltip>
+                    <q-tooltip>내 계정</q-tooltip>
                 </q-btn>
             </div>
         </q-toolbar>
