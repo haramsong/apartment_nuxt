@@ -1,0 +1,14 @@
+// z Index setting
+@function z($layer) {
+  @return map-get($zIndex-set, $layer);
+}
+
+// responsive setting
+@function media($size) {
+  @return map-get($media-set, $size);
+}
+
+// font size
+@function rem($target) {
+	@return $target / 16 * 1rem;
+}

@@ -1,13 +1,13 @@
-@import '_main';
-@import '_mixin';
-@import '_font';
+// utility
+@import 'utility/variable';
+@import 'utility/mixin';
+@import 'utility/function';
 
-@import '_base';
-@import '_custom-el-plus';
+// common
+@import 'base/base'; // reset css
+@import 'base/font';
+@import 'base/helper';
 
-@import '_aside';
-@import '_header';
+// layout
 
-@import '_board';
-
-@import '_card_section'
+// page

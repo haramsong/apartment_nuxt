@@ -1,0 +1,74 @@
+// responsive
+@mixin media-size($size, $range: max) {
+  @media all and (#{$range}-width: media($size)) {
+    @content;
+  }
+}
+
+@mixin media($px, $range: max) {
+  @media all and (#{$range}-width: $px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @include media-size(tab) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @include media-size(mb) {
+    @content;
+  }
+}
+
+// size
+@mixin circle($s) {
+  width: $s;
+  height: $s;
+  border-radius: 50%;
+  @content;
+}
+
+@mixin square($s) {
+  width: $s;
+  height: $s;
+}
+
+@mixin full {
+  width: 100%;
+  height: 100%;
+}
+
+// flex items
+@mixin flex($d: flex) {
+  display: $d;
+  @content;
+}
+
+@mixin flex-col($d: flex) {
+  display: $d;
+  flex-direction: column;
+  @content;
+}
+
+@mixin flex-op($a: null, $j: null) {
+  align-items: $a;
+  justify-content: $j;
+  @content;
+}
+
+@mixin flex-center($d: flex) {
+  display: $d;
+  @include flex-op(center, center);
+
+  @content;
+}
+
+@mixin flex-btw($d: flex) {
+  display: $d;
+  @include flex-op(center, space-between);
+
+  @content;
+}

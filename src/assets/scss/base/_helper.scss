@@ -1,0 +1,54 @@
+/* =================== helper =================== */
+// 노출되지 않을 영역
+.none {
+  display: none !important;
+}
+
+// 보이진 않지만 리딩되는 영역
+.voice_only {
+  overflow: hidden;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 1px;
+  height: 1px;
+  color: transparent;
+}
+
+// flexible content wrap
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+// 브라우저 크기별 레이아웃 보이기(노출 여부)
+// 태블릿
+.tab_hide {
+  @include tablet {
+    display: none !important;
+  }
+}
+
+.tab_show {
+  display: none !important;
+
+  @include tablet {
+    display: block !important;
+  }
+}
+
+// 모바일
+.mb_hide {
+  @include mobile {
+    display: none !important;
+  }
+}
+
+.mb_show {
+  display: none !important;
+
+  @include mobile {
+    display: block !important;
+  }
+}

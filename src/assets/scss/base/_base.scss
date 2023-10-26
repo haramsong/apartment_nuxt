@@ -1,0 +1,109 @@
+/* =================== base =================== */
+html,
+body,
+div,
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+image,
+video,
+i,
+form,
+caption,
+canvas,
+ul,
+li,
+ol,
+dl,
+dt,
+dd,
+a,
+button,
+section,
+article,
+aside,
+nav,
+header,
+footer,
+main,
+table,
+tr,
+th,
+td,
+iframe,
+small,
+b,
+em,
+strong,
+fieldset,
+label,
+legend,
+tbody,
+tfoot,
+thead,
+embed,
+figure,
+figcaption,
+audio,
+address {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  line-height: 1.15;
+  font: inherit;
+  font-family: "gmarket", sans-serif;
+  vertical-align: baseline;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+a {
+  outline: 0;
+  background-color: transparent;
+
+  text: {
+    decoration: none;
+  }
+
+  color: $c-text;
+  cursor: pointer;
+}
+
+ol,
+ul,
+dl {
+  list-style: none;
+}
+
+textarea {
+  resize: none;
+}
+
+address {
+  font-style: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Reset img */
+img {
+  max-width: 100%;
+  height: auto;
+}
