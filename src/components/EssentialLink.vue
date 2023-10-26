@@ -53,8 +53,8 @@
             default: 0
         },
         children: {
-            type: Array,
-            default: []
+            type: Object,
+            default: {}
         }
     })
 </script>
