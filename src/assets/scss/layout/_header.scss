@@ -1,0 +1,19 @@
+// -------------------------header styles
+.sc-header {
+  z-index: z(header);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $hd-height;
+  border-bottom: 1px solid #cdcdcd;
+  background-color: $c-white;
+}
+
+.sc-logo {
+  padding: 5px;
+
+  img {
+    height: $hd-height - 10px;
+  }
+}
