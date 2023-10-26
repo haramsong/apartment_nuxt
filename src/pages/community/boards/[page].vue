@@ -22,16 +22,16 @@
                             <!-- 검색 조건 및 입력 혼합부분 -->
                             <el-input v-model="keyword" size="large" class="select-input_type" :maxlength="100">
                                 <template #prepend>
-                                    <el-select-v2 v-model="keywordType" class="label-selectV1" :options="keywordTypeOptions" />
+                                    <el-select-v2 v-model="keywordType" :options="keywordTypeOptions" />
                                 </template>
                             </el-input>
                         </div>
                     </li>
-                    <li class="page-searchBox__list_item mgL20">
-                        <el-button class="button button__Big button__black w180p mgLAuto">
+                    <li class="page-searchBox__list_item mgL20" :class="!$q.screen.gt.sm && 'full_item mgT12'">
+                        <el-button class="button button__Big button__black mgLAuto" :class="$q.screen.gt.xs ? 'w180p' : 'w90' ">
                             검색
                         </el-button>
-                        <el-button class="button button__Big button__white w96p">
+                        <el-button v-if="$q.screen.gt.xs" class="button button__Big button__white w96p">
                             초기화
                         </el-button>
                     </li>
@@ -87,6 +87,7 @@
 </template>
 
 <script lang="ts" setup>
+const $q = useQuasar();
 import { ILabelValueOptionsData } from '~/@types/label-value-options'
 
 interface IFormGroupList {

@@ -145,7 +145,7 @@
     flex-direction: column;
     height: calc(100% - 56px);
     overflow-y: auto;
-    min-width: 1240px;
+    min-width: 800px;
         font-family: 'GmarketSans Medium';
 }
 
@@ -233,4 +233,18 @@
         margin-bottom: 0;
     }
 
+}
+
+@media ( max-width: 1023px ) {
+    .page-contents {
+        padding: 24px 40px;
+        min-width: 400px;
+    }
+}
+
+@media (max-width: 600px) {
+    .page-contents {
+        padding: 24px 40px;
+        min-width: 400px;
+    }
 }
