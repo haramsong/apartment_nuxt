@@ -27,6 +27,9 @@
                 </ul>
             </div>
         </div>
+        <ModalBase>
+            다른 내용 쓸 수 있게 하는게 뭐였지 <content />왜 아니지
+        </ModalBase>
     </header>
 </template>
 

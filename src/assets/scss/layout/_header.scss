@@ -37,7 +37,7 @@
 
   .mypage-btn {
     @include square(40px);
-    border: 1px solid $c-text;
+    border: 2px solid $c-text;
     border-radius: 50%;
     
     @include hover {
