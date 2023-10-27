@@ -6,12 +6,58 @@
   left: 0;
   width: 100%;
   height: $hd-height;
+  padding: 0 20px;
   border-bottom: 1px solid #cdcdcd;
   background-color: $c-white;
+
+  .icon-btns-wrap {
+    @include flex-center;
+  }
+
+  .icon-btn-list {
+    margin: 0 2px;
+  }
+
+  .icon-btn {
+    @include reset;
+    @include square($hd-height);
+
+    transition: all 0.2s;
+
+    svg * {
+      transition: all 0.2s;
+    }
+
+    @include hover {
+      svg * {
+        fill: $c-main;
+      }
+    }
+  }
+
+  .mypage-btn {
+    @include square(40px);
+    border: 1px solid $c-text;
+    border-radius: 50%;
+    
+    @include hover {
+      border-color: $c-main;
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+  }
 }
 
 .sc-logo {
-  padding: 5px;
+  a {
+    display: block;
+    height: 100%;
+  }
 
   img {
     height: $hd-height - 10px;

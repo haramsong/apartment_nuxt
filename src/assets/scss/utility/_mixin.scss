@@ -72,3 +72,23 @@
 
   @content;
 }
+
+// reset
+@mixin reset {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  box-shadow: none;
+}
+
+@mixin hover {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
