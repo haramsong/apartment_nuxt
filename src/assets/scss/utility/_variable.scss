@@ -1,0 +1,27 @@
+// color
+$c-text: #222;
+$c-main: #0079BB;
+$c-white: #fff;
+
+// size
+$container: 1600px;
+$hd-height: 50px;
+$nav-weight: 230px;
+
+// media query
+$media-set: (
+  cont: $container,
+  tab: 1024px,
+  mb: 600px
+);
+
+// z-index setting
+$zIndex-set: (
+  modal: 100,
+  fixed: 20,
+  header: 10,
+  double: 2,
+  one: 1,
+  zero: 0,
+  minus: -1
+);

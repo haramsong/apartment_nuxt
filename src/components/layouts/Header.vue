@@ -1,36 +1,36 @@
 <template>
-    <q-header elevated class="bg-white text-grey-8 q-py-xs" height-hint="58">
-        <q-toolbar>
-            <q-btn z-max flat dense round @click="store.toggleLeftDrawer()" v-if="!$q.screen.gt.xs" aria-label="Menu" class="YL__drawer-button" icon="menu" />
-            <q-btn size="sm" flat no-caps no-wrap class="YL__logo" v-if="$q.screen.gt.xs">
-                <q-icon name="img:/img/logo.svg" class="YL__logo" />
-            </q-btn>
-
-            <q-space />
-
-            <div class="YL__toolbar-input-container row no-wrap">
-                <q-input dense outlined square v-model="search" placeholder="검색" class="bg-white col" />
-                <q-btn class="YL__toolbar-input-btn" color="blue-2" text-color="blue-8" icon="search" unelevated />
+    <header class="sc-header">
+        <div class="flex-btw-wrap">
+            <div class="left-contents">
+                <button type="button" class="gnb-toggle-btn" @click="store.toggleLeftDrawer()" v-if="!$q.screen.gt.xs">햄버거버튼</button>
             </div>
-
-            <q-space />
-
-            <div class="q-gutter-sm row items-center no-wrap">
-                <q-btn round dense flat color="grey-8" icon="notifications">
-                    <q-badge color="red" text-color="white" floating>
-                        2
-                    </q-badge>
-                    <q-tooltip>Notifications</q-tooltip>
-                </q-btn>
-                <q-btn round flat>
-                    <q-avatar size="35px">
-                        <img src="/img/person-circle-sharp.svg">
-                    </q-avatar>
-                    <q-tooltip>내 계정</q-tooltip>
-                </q-btn>
+            <div class="center-contents">
+                <h1 class="sc-logo">
+                    <a href="">
+                        <img src="/img/logo/logo.svg" alt="starclass" />
+                    </a>
+                </h1>
             </div>
-        </q-toolbar>
-    </q-header>
+            <div class="right-contents">
+                <ul class="icon-btns-wrap">
+                    <li class="icon-btn-list">
+                        <button type="button" class="icon-btn"><IconSearch /><span class="voice-only">검색창 열기</span></button>
+                    </li>
+                    <li class="icon-btn-list">
+                        <button type="button" class="icon-btn"><IconBall /><span class="voice-only">알림 보기</span></button>
+                    </li>
+                    <li class="icon-btn-list">
+                        <button type="button" class="icon-btn mypage-btn">
+                            <img src="/img/img/img_profile.png" alt="프로필 기본" />
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ModalBase>
+            다른 내용 쓸 수 있게 하는게 뭐였지 <content />왜 아니지
+        </ModalBase>
+    </header>
 </template>
 
 <script setup lang="ts">
