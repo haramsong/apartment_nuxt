@@ -27,12 +27,7 @@
                 </ul>
             </div>
         </div>
-        <ModalBase>
-            <!-- 알럿이 필요할 때 -->
-            <ModalAlert />
-            <!-- 컨펌이 필요할 때 -->
-            <ModalConfirm />
-        </ModalBase>
+        <ModalAlert />
     </header>
 </template>
 
