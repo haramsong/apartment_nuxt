@@ -27,7 +27,7 @@
                 </ul>
             </div>
         </div>
-        <ModalAlert />
+        <Modal type="confirm" />
     </header>
 </template>
 
