@@ -10,7 +10,7 @@ export default defineNuxtConfig({
   ],
   css: [
     'element-plus/dist/index.css',
-    '@/assets/scss/styles.scss',
+    '@/assets/scss/ui.scss',
   ],
   quasar: {
     lang: 'ko-KR',
