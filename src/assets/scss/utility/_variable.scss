@@ -1,27 +1,117 @@
-// color
-$c-text: #222;
-$c-main: #0079BB;
-$c-white: #fff;
+// color set
+// 실제 사용은 하단의 color map
+// blue color
+$blue-900: #1D2D49;
+$blue-800: #25385B;
+$blue-700: #2C436D;
+$blue-600: #334E7F;
+$blue-500: #3B5A93;
+$blue-400: #496FB6;
+$blue-300: #6D8CC5;
+$blue-200: #92A9D3;
+$blue-100: #B6C6E2;
+$blue-50: #DAE2F1;
 
-// size
-$container: 1600px;
-$hd-height: 50px;
-$nav-weight: 230px;
+// red color
+$red-900: #F11104;
+$red-800: #FB2114;
+$red-700: #FB392D;
+$red-600: #FB5146;
+$red-500: #FC685E;
+$red-400: #FC8078;
+$red-300: #FD9791;
+$red-200: #FDAEAA;
+$red-100: #FEC6C3;
+$red-50: #FEDEDC;
 
-// media query
-$media-set: (
-  cont: $container,
-  tab: 1024px,
-  mb: 600px
+// gray scale
+$gray-900: #212529;
+$gray-800: #343A40;
+$gray-700: #495057;
+$gray-600: #868E96;
+$gray-500: #ADB5BD;
+$gray-400: #CED4DA;
+$gray-300: #DEE2E6;
+$gray-200: #E9ECEF;
+$gray-100: #F1F3F5;
+$gray-50: #F6F7F8;
+$gray-0: #FFF;
+
+// color map
+$color-set: (
+  main: $blue-500,
+  sub: $red-500,
+  text: $gray-900,
+  white: $gray-0,
+  main-900: $blue-900,
+  main-800: $blue-800,
+  main-700: $blue-700,
+  main-600: $blue-600,
+  main-500: $blue-500,
+  main-400: $blue-400,
+  main-300: $blue-300,
+  main-200: $blue-200,
+  main-100: $blue-100,
+  main-50: $blue-50,
+  blue-900: $blue-900,
+  blue-800: $blue-800,
+  blue-700: $blue-700,
+  blue-600: $blue-600,
+  blue-500: $blue-500,
+  blue-400: $blue-400,
+  blue-300: $blue-300,
+  blue-200: $blue-200,
+  blue-100: $blue-100,
+  blue-50: $blue-50,
+  red-900: $red-900,
+  red-800: $red-800,
+  red-700: $red-700,
+  red-600: $red-600,
+  red-500: $red-500,
+  red-400: $red-400,
+  red-300: $red-300,
+  red-200: $red-200,
+  red-100: $red-100,
+  red-50: $red-50,
+  gry-900: $gray-900,
+  gry-800: $gray-800,
+  gry-700: $gray-700,
+  gry-600: $gray-600,
+  gry-500: $gray-500,
+  gry-400: $gray-400,
+  gry-300: $gray-300,
+  gry-200: $gray-200,
+  gry-100: $gray-100,
+  gry-50: $gray-50,
+  gry-0: $gray-0,
 );
 
-// z-index setting
 $zIndex-set: (
-  modal: 100,
+  popup: 100,
   fixed: 20,
   header: 10,
   double: 2,
-  one: 1,
+  default: 1,
   zero: 0,
-  minus: -1
+  minus: -1,
+);
+
+$path-set: (
+  icon: "@/assets/images/icon/",
+  img: "@/assets/images/img/",
+  logo: "@/assets/images/logo/",
+);
+
+// 높이, 넓이
+$hd-height: 60px;
+$gnb-width: 260px;
+$logo-height: 170px;
+$base-pd: 0 20px;
+
+// button & badge
+// btn color
+$btn-color: (
+  // basic: gray, // basic은 예외로 작성
+  red: red,
+  main: main,
 );

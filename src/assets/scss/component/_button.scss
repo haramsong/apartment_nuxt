@@ -1,0 +1,262 @@
+/* =================== button =================== */
+// button wrapper
+.btns-wrap {
+  @include flex {
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+
+  &:not(:first-child) {
+    margin-top: 5px;
+  }
+
+  .btn {
+    &:not(:first-of-type) {
+      margin-left: 10px;
+    }
+  }
+}
+
+// button reset
+.btn {
+  @include input-reset;
+  @include flex-center(inline-flex);
+
+  border-radius: 4px;
+  font-weight: 400;
+  transition: all 0.3s;
+}
+
+// button style
+// 버튼 높이
+.btn-m {
+  height: 32px;
+  padding: 0 12px;
+  font-size: rem(14);
+}
+
+.btn-l {
+  height: 40px;
+  padding: 0 20px;
+  font-size: rem(14);
+}
+
+.btn-xl {
+  height: 48px;
+  padding: 0 40px;
+  font-size: rem(18);
+}
+
+// 버튼 색
+// fill button
+@each $name,
+$color in $btn-color {
+
+  // basic은 예외로 작성
+  .btn-#{$name} {
+    border: 1px solid c(#{$color} + '-500');
+    background-color: c(#{$color} + '-500');
+    color: c(gry-0);
+
+    @include hover {
+      border-color: c(#{$color} + '-300');
+      background-color: c(#{$color} + '-300');
+      color: c(gry-0);
+    }
+
+    @include active {
+      border-color: c(#{$color} + '-600');
+      background-color: c(#{$color} + '-600');
+      color: c(gry-0);
+    }
+
+    @include disabled {
+      border-color: c(#{$color} + '-200');
+      background-color: c(#{$color} + '-200');
+      color: c(gry-0);
+      cursor: not-allowed;
+    }
+  }
+}
+
+// ghost button
+@each $name,
+$color in $btn-color {
+
+  // basic은 예외로 작성
+  .btn-ghost-#{$name} {
+    border: 1px solid c(#{$color} + '-500');
+    color: c(#{$color} + '-500');
+
+    @include hover {
+      border-color: c(#{$color} + '-300');
+      color: c(#{$color} + '-300');
+    }
+
+    @include active {
+      border-color: c(#{$color} + '-600');
+      color: c(#{$color} + '-600');
+    }
+
+    @include disabled {
+      border-color: c(#{$color} + '-200');
+      color: c(#{$color} + '-200');
+      cursor: not-allowed;
+    }
+  }
+}
+
+.btn-basic {
+  border: 1px solid c(gry-300);
+  background-color: c(gry-50);
+  color: c(text);
+
+  @include hover {
+    border-color: c(gry-50);
+    background-color: c(gry-50);
+    color: c(gry-600);
+  }
+
+  @include active {
+    border-color: c(gry-200);
+    background-color: c(gry-200);
+    color: c(gry-600);
+  }
+
+  @include disabled {
+    border-color: c(gry-50);
+    background-color: c(gry-50);
+    color: c(gry-400);
+    cursor: not-allowed;
+  }
+}
+
+.btn-ghost-basic {
+  border: 1px solid c(gry-300);
+  color: c(text);
+
+  @include hover {
+    border-color: c(gry-200);
+    color: c(gry-400);
+  }
+
+  @include active {
+    border-color: c(gry-400);
+    color: c(gry-600);
+  }
+
+  @include disabled {
+    border-color: c(gry-300);
+    color: c(gry-400);
+    cursor: not-allowed;
+  }
+}
+
+// custom buttons
+// modal-close
+.btn-close {
+  @include square(40px);
+
+  position: absolute;
+  top: 0;
+  left: auto;
+  right: 0;
+  font-size: 1px;
+  font-weight: 0;
+  color: transparent;
+  text-indent: -rem;
+
+  @include hover {
+
+    &:before,
+    &:after {
+      height: 23px;
+    }
+  }
+
+  @include make-virtual {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 20px;
+    background-color: c(gry-0);
+    transition: height 0.3s;
+  }
+
+  &:before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &:after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+// pagination button style
+.btn-page {
+  @include bd-style03;
+
+  min-width: 32px;
+  height: 32px;
+  margin-left: -1px;
+  padding: 0 12px;
+  border: 1px solid c(gry-300);
+  border-radius: 0;
+
+  &:nth-child(2) {
+    border-radius: 4px 0 0 4px;
+  }
+
+  &:nth-last-child(2) {
+    border-radius: 0 4px 4px 0;
+  }
+
+  @include hover {
+    color: c(gry-500);
+  }
+
+  &.on {
+    border-color: c(main);
+    color: c(main);
+  }
+
+  &-prev,
+  &-next {
+    margin-right: 13px;
+    padding: 0;
+
+    @include make-before {
+      width: 10px;
+      height: 10px;
+      border-top: 2px solid c(gry-900);
+      border-left: 2px solid c(gry-900);
+      transform: rotate(-45deg);
+    }
+
+    @include hover {
+      &:before {
+        border-color: c(gry-500);
+      }
+    }
+  }
+
+  &-next {
+    margin-right: 0;
+    margin-left: 13px;
+
+    &:before {
+      transform: rotate(135deg);
+    }
+  }
+}
+
+.btn-page-icon {
+  @include square(32px);
+  @include bg-op;
+
+  position: inherit;
+  transition: all 0.3s;
+  border: 0;
+}
