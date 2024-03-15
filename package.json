@@ -10,19 +10,16 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@element-plus/nuxt": "^1.0.6",
     "@nuxt/devtools": "latest",
     "@pinia-plugin-persistedstate/nuxt": "^1.1.2",
     "@types/node": "^20.8.4",
     "@typescript-eslint/eslint-plugin": "^6.7.5",
     "@typescript-eslint/parser": "^6.7.5",
-    "element-plus": "^2.3.14",
     "eslint": "^8.51.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-vue": "^9.17.0",
     "nuxt": "^3.7.4",
-    "nuxt-quasar-ui": "^2.0.5",
     "prettier": "^3.0.3",
     "sass": "^1.64.2",
     "sass-loader": "^13.3.2",
@@ -33,7 +30,6 @@
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.11",
-    "@quasar/extras": "^1.16.7",
     "@types/crypto-js": "^4.1.2",
     "@types/lodash-es": "^4.17.9",
     "@types/qs": "^6.9.8",
@@ -42,7 +38,7 @@
     "defu": "^6.1.2",
     "lodash": "^4.17.21",
     "pinia": "^2.1.6",
-    "qs": "^6.11.2",
-    "quasar": "^2.12.7"
+    "pnpm": "^8.9.2",
+    "qs": "^6.11.2"
   }
 }

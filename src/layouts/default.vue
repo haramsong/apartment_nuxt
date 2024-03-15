@@ -1,12 +1,10 @@
 <template>
-    <q-layout view="hHh Lpr lff" class="bg-grey-1">
-        <div>
-            <LayoutsHeader />
+    <div>
+        <LayoutsHeader />
             <main class="container">
-                asdf
+                <slot />
             </main>
-        </div>
-    </q-layout>
+    </div>
 </template>
 
 <script lang="ts" setup>
