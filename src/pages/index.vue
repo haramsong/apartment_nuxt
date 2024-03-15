@@ -1,5 +1,5 @@
 <template>
-    <LayoutsCard />
+    <Card />
 </template>
 
 <script setup>
