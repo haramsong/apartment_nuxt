@@ -1,6 +1,6 @@
 <template>
     <div>
-        <CommonHeader />
+        <CommonHeader v-if="userStatus" />
         <main class="container">
             <slot />
         </main>
@@ -8,8 +8,19 @@
 </template>
 
 <script lang="ts" setup>
-import { useRoute } from 'vue-router';
+import { useAuthStore } from '@/stores/auth'
+import { useRouter } from 'vue-router'
 
-const route = useRoute();
+const authStore = useAuthStore()
+const userStatus = authStore.userStatus
+
+const router = useRouter()
+
+onMounted(() => {
+    if (!userStatus) {
+        router.push('/auth/login')
+    }
+});
+
 </script>
 
