@@ -1,9 +1,9 @@
 <template>
     <div>
-        <LayoutsHeader />
-            <main class="container">
-                <slot />
-            </main>
+        <CommonHeader />
+        <main class="container">
+            <slot />
+        </main>
     </div>
 </template>
 
