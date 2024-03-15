@@ -1,10 +1,7 @@
 <template>
-    <q-page> 
-        <LayoutsCard />
-    </q-page>
+    <LayoutsCard />
 </template>
 
 <script setup>
-import { useQuasar } from 'quasar';
-const $q = useQuasar();
+
 </script>
