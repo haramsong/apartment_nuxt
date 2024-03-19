@@ -1,7 +1,7 @@
 {
   // https://nuxt.com/docs/guide/concepts/typescript
   "compilerOptions": {
-    "types": ["node", "element-plus/global"],
+    "types": ["node"],
     "baseUrl": "./src"
   },
   "extends": "./.nuxt/tsconfig.json",

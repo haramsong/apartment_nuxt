@@ -117,6 +117,10 @@ background-image: urlPath($path, $img);
 }
 
 @mixin hover {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6185e9da1ab9458db479a4dffc2ecf697a7e75ae
   &:hover,
   &:focus {
     @content;
